@@ -3,6 +3,7 @@
       <html lang="en"></html>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
       <title>Personal Finance Flowchart</title>
     </head>
@@ -17,38 +18,23 @@
         </div>
       <hr>
         <h2 class="text-muted"> Your Checklist</h2>
-            <div>
-                <button class="btn btn-primary">Add Comment</button>
-                <button class="btn btn-success">Complete</button>
-                <button class="btn btn-danger">Delete</button>
+   
+      <div class="container-sm" style="width: 50%;">
+            <div class="card text-center">
+              <div class="card-header">Phase 0: Budget & Reduce Expenses</div>
+              <div class="card-body">
+                <h5 class="card-title">Create Budget</h5>
+                <p class="card-text text-muted">Fundamental to a sound financial footing is knowing where your money is going, budgeting helps you see your sources of income less your expenses.</p>
+                <a href="#" class="card-link">More info</a>
+                <br>
+                  <button type="button" class="btn btn-success">Complete</button>
+                  <button type="button" class="btn btn-danger">Skip</button>
+                  <button type="button" class="btn btn-primary">Add Comment</button>
+                </div>
+              </div>
             </div>
-            <br>
-        <table class="table table-striped table-bordered table-hover table-sm">
-            <thead class="thead-dark">
-                <tr>
-                    <th><input type="checkbox" name="checkbox" value="checkbox"></th>
-                    <th scope="col">Number</th>
-                    <th scope="col">Completed</th>
-                    <th scope="col">Phase</th>
-                    <th scope="col">Task Name</th>
-                    <th scope="col">Task Description</th>
-                    <th scope="col">Comment</th>
-                    <th scope="col">Links</th>
-                </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td><input type="checkbox" name="checkbox" value="checkbox"></td>
-                <td scope="col">Number</td>
-                <td scope="col">Completed</td>
-                <td scope="col">Phase</td>
-                <td scope="col">Task Name</td>
-                <td scope="col">Task Description</td>
-                <td scope="col">Comment</td>
-                <td scope="col">Links</td>
-            </tr>
-            </tbody>
-        </table>
+      </div>
+
       </div>
       <footer class="footer" style="position: fixed; left:0; bottom:0; width: 100%; background-color: rgb(245, 245, 245); padding: 1rem;">
         <div class="container">
