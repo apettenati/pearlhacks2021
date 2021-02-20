@@ -1,7 +1,19 @@
-.card-header-phase0 {
-    background-color: rgb(34, 36, 70);
+.card-header {
+    color: white;
+    font-size: 18px;
+    padding: 1rem;
 }
 
+.card-title {
+    font-size: 18px;
+}
+
+.card-header-phase0 {
+    color: white;
+    padding: 1rem;
+    font-style: bold;
+    background-color: rgb(34, 36, 70);
+}
 .card-header-phase1 {
     background-color: rgb(233, 90, 80);
 }
@@ -26,16 +38,30 @@
     background-color: rgb(133, 82, 167);
 }
 
+.cards {
+    width: 50%;
+}
+
+.card {
+    margin: 1.5rem;
+}
+
+button {
+    margin-top: 1rem;
+}
 /* TODO: make CSS prettier */
 .completed {
-    text-decoration: line-through;
+    opacity: 0.3;
     background-color: rgb(185, 184, 184);
+}
+
+.completed-strikethrough {
+    text-decoration: line-through;
 }
 
 footer {
    position: fixed; left:0; bottom:0; width: 100%; background-color: rgb(245, 245, 245); padding: 1rem; 
 }
-
 
 .skipped {
     display: none;
