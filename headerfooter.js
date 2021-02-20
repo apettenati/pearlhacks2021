@@ -1,6 +1,6 @@
 window.onload = function () {
-    const [header] = document.getElementsByTagName('header');
-    const [footer] = document.getElementsByTagName('footer');
+    const [header] = document.querySelectorAll('body > header');
+    const [footer] = document.querySelectorAll('body > footer');
 
     header.innerHTML = ` 
       <header>
