@@ -26,3 +26,17 @@
     background-color: rgb(133, 82, 167);
 }
 
+/* TODO: make CSS prettier */
+.completed {
+    text-decoration: line-through;
+    background-color: rgb(185, 184, 184);
+}
+
+footer {
+   position: fixed; left:0; bottom:0; width: 100%; background-color: rgb(245, 245, 245); padding: 1rem; 
+}
+
+
+.skipped {
+    display: none;
+}
