@@ -1,6 +1,7 @@
 //Selectors
 const completeButtons = document.querySelectorAll('.complete');
 const skipButtons = document.querySelectorAll('.skip');
+const commentButtons = document.querySelectorAll('.comment');
 
 //Event Listeners
 completeButtons.forEach(button => {
@@ -9,6 +10,10 @@ completeButtons.forEach(button => {
 skipButtons.forEach(button => {
     button.addEventListener('click', skipTask);
 })
+commentButtons.forEach(button => {
+    button.addEventListener('click', addTextBox)
+})
+
 
 //Functions
 function completeTask(event) {
@@ -26,3 +31,13 @@ function skipTask(event) {
     const card = button.parentElement.parentElement;
     card.classList.toggle("skipped");
 } 
+
+function addTextBox(event) {
+    console.log("clicked!")
+    const button = event.target;
+    const card = button.parentElement.parentElement;
+    var addMe = document.createElement("input");
+    addMe.setAttribute("type","text");
+    addMe.setAttribute("id","i");
+    card.appendChild(addMe);
+}
