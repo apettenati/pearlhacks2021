@@ -14,7 +14,11 @@ skipButtons.forEach(button => {
 function completeTask(event) {
     const button = event.target;
     const card = button.parentElement;
+    const cardChildren = button.parentElement.children;
+    console.log(card);
     card.classList.toggle("completed");
+    cardChildren[0].classList.toggle("completed-strikethrough");
+    cardChildren[1].classList.toggle("completed-strikethrough");
 } 
 
 function skipTask(event) {
