@@ -7,8 +7,12 @@ window.onload = function () {
         <nav class="fixed-top navbar-expand navbar-dark bg-dark">
           <div class="header">
             <a class="navbar-brand" style="padding-left: 20%;" href="index.html">"Pearl"-sonal Finance Hacker</a>
-            <div class="navbar-right" style="padding-right: 20%;" id="navbarSupportedContent">
+            <div class="navbar-left"  id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="index.html">Checklist</a>
+                </li>
                 </li>
                 <li class="nav-item mx-2">
                   <a class="nav-link" href="faq.html">FAQ</a>
@@ -16,6 +20,10 @@ window.onload = function () {
                 <li class="nav-item mx-2">
                   <a class="nav-link" href="resources.html">Resources</a>
                 </li>
+              </ul>
+            </div>
+            <div class="navbar-right" style="padding-right: 20%;" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item mx-2">
                   <a class="nav-link" href="login.html">Log In</a>
                 </li>
