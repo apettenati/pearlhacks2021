@@ -133,11 +133,13 @@ h2 {
   }
 
   #HSA-info {
-      top: 175px;
+      top: 190px;
       width: 170px;
+      right: 15px;
   }
 
   #stocks-info {
     top: 125px;
+    right: 10px;
     width: 170px;
 }
