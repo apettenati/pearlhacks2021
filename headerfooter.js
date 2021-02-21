@@ -14,6 +14,9 @@ window.onload = function () {
                   <a class="nav-link" href="faq.html">FAQ</a>
                 </li>
                 <li class="nav-item mx-2">
+                  <a class="nav-link" href="resources.html">Resources</a>
+                </li>
+                <li class="nav-item mx-2">
                   <a class="nav-link" href="login.html">Log In</a>
                 </li>
                 <li class="nav-item mx-2">
