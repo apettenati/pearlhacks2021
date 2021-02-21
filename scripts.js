@@ -56,6 +56,11 @@ function saveText(event) {
     var list = cardChildren[10];
     var text = document.createElement('li');
     var textVal = cardChildren[4].value;
+    if (textVal == "") {
+        alert("Please enter a comment")
+        return
+    }
     text.appendChild(document.createTextNode(textVal));
     list.appendChild(text);
+    cardChildren[4].value = ""
 }
