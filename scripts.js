@@ -69,16 +69,32 @@ function saveText(event) {
 
 function setData(data) {
     let completed;
-    if(localStorage.getItem('completed') === null) {
+    console.log("setdata")
+    if (localStorage.getItem('completed') === null) {
         completed = [];
     }
+    console.log(localStorage.getItem('completed'))
+    console.log("completed: ", completed)
+    console.log("comparison 2: ", (localStorage.getItem('completed') != null && localStorage.getItem('completed').indexOf(data) >= 0))
+    var idx = localStorage.getItem('completed').indexOf(data)
+    console.log("idx: ", idx)
+    if (localStorage.getItem('completed') != null &&  idx >= 0) {
+        console.log("good")
+        var arr = localStorage.getItem('completed').split(", ")
+        console.log("arr", arr)
+        arr.splice(idx, 1)
+        completed = arr
+        console.log("arr after pop: ", arr)
+        console.log("completed: ", completed)
+    }
     else {
+        console.log("else")
         completed = JSON.parse(localStorage.getItem('completed'));
+        console.log("compelted in else: ", completed)
     }
     console.log(completed);
     completed.push(data);
     localStorage.setItem('completed', JSON.stringify(completed));
-
 }
 
 function getData() {
