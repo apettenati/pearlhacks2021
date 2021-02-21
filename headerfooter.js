@@ -5,7 +5,7 @@ window.onload = function () {
     header.innerHTML = ` 
       <header>
         <nav class="navbar-expand-lg navbar-dark bg-dark">
-          <div class="container">
+          <div class="header">
             <a class="navbar-brand" href="index.html">Personal Finance Tracker</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -18,6 +18,9 @@ window.onload = function () {
                 <li class="nav-item">
                   <a class="nav-link" href="register.html">Register</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="faq.html">FAQ</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -26,7 +29,7 @@ window.onload = function () {
     `;
 
     footer.innerHTML = `
-        <div class="container">
+        <div class="footer">
           <span class="text-muted">
             Disclaimer: This <a href="https://i.imgur.com/u0ocDRI.png">chart</a> is a supplemental guide, there are circumstances where you may need to alter your approach such as earning income that exceeds the Roth IRA limit, thus creating need to pursue Backdoor Roth contributions. To make optimal financial decisions for your unique situation Snowball vs. Avalanche, Roth vs. Traditional, etc., it is vital to spend the time cultivating the necessary knowledge to enable you to move forward from an informed place of strength.
           </span>
