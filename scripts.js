@@ -26,7 +26,7 @@ function completeTask(event) {
     cardChildren[0].classList.toggle("completed-strikethrough");
     cardChildren[1].classList.toggle("completed-strikethrough");
     console.log(cardChildren[0].innerHTML);
-    setData(cardChildren[0].innerHTML);
+    setData(cardChildren[0].innerHTML, "completed");
 } 
 
 function skipTask(event) {
@@ -48,7 +48,6 @@ function saveText(event) {
         var list = cardChildren[10];
         var text = document.createElement('li');
         var textVal = cardChildren[4].value;
-
         text.appendChild(document.createTextNode(textVal));
         list.appendChild(text);
         cardChildren[4].value = ""
@@ -79,7 +78,6 @@ function getData() {
     // get array of titles of the cards (20)
     // iterate thru array find the ones that are in completed (indexOf)
     // cardChildren[1].classList.toggle("completed-strikethrough");
-
     let completed;
     var titles = document.getElementsByClassName("card-title")
     console.log("title: ", titles)
