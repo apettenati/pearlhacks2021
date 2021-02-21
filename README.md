@@ -1,7 +1,10 @@
 # "Pearl"-sonal Finance Hacker
 
-Created at [Pearl Hacks 2021!](https://pearlhacks.com/)
+
 It's never too late to learn about finance and plan on how to become financially secure
+
+
+Created at [Pearl Hacks 2021!](https://pearlhacks.com/)
 
 [Devpost Link](https://devpost.com/software/pearl-sonal-finance-hacker/)
 
