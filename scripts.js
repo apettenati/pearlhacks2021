@@ -11,7 +11,7 @@ skipButtons.forEach(button => {
     button.addEventListener('click', skipTask);
 })
 commentButtons.forEach(button => {
-    button.addEventListener('click', addTextBox)
+    button.addEventListener('click', saveText)
 })
 
 
@@ -32,12 +32,16 @@ function skipTask(event) {
     card.classList.toggle("skipped");
 } 
 
-function addTextBox(event) {
-    console.log("clicked!")
+function saveText(event) {
+    listHeader = document.getElementById("list-header");
+    listHeader.style.display = "block";
     const button = event.target;
     const card = button.parentElement.parentElement;
-    var addMe = document.createElement("input");
-    addMe.setAttribute("type","text");
-    addMe.setAttribute("id","i");
-    card.appendChild(addMe);
+    var list = document.getElementById("commlist");
+    var textVal = document.getElementById("text").value;
+    var text = document.createElement('li');
+    text.appendChild(document.createTextNode(textVal));
+    list.appendChild(text);
+    // card.appendChild(text);
+    // card.appendChild(blank);
 }
