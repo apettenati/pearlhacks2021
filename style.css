@@ -87,3 +87,40 @@ ul {
 #list-header {
     margin-top: 25px;
 }
+
+.hover-info {
+    cursor: pointer;
+  }
+
+  .hover-info p.info-box {
+    /* display:; */
+    opacity: 0;
+    color: rgb(19, 19, 19);
+  }
+  
+  .hover-info:hover p.info-box {
+    opacity: 1;
+    background-color: rgb(255, 255, 255, 0.7);
+    display: block;
+  }
+
+  .card-info {
+    /* margin: 1.5rem; */
+    position: absolute;
+    /* top: 2px; */
+    right: 30px;
+    width: 85px;
+    height: 125px;
+    box-sizing: border-box;
+    position: "right";
+  }
+
+  #HSA-info {
+      top: 175px;
+      width: 170px;
+  }
+
+  #stocks-info {
+    top: 125px;
+    width: 170px;
+}

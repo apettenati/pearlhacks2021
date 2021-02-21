@@ -169,8 +169,7 @@
     <div class="card text-center">
       <div class="card-header card-header-phase2">Phase 2: Employer-sponsored matching funds</div>
       <div class="card-body">
-        <h5 class="card-title">Pay Any Non-Essential Bills in FulDoes your employer offer a retirement account with an
-          employer match?</h5>
+        <h5 class="card-title">Does your employer offer a retirement account with an employer match?</h5>
         <p class="card-text text-muted">If employer offers an employer matching retirement account, contribute the
           amount
           needed to get the full employment match, but nothing above that amount.</p>
@@ -241,7 +240,13 @@
       <div class="card-header card-header-phase4">Phase 4: Savings for retirement in an IRA & higher education expenses</div>
       <div class="card-body">
         <h5 class="card-title">Evaluate the differences between a Roth vs Traditional IRA</h5>
-        <p class="card-text text-muted">Max out your contributions to whichever one you decide on</p>
+        <!-- <div class="hoverinfo"> <span>i</span> -->
+
+        <div class = "hover-info">
+          <p class="card-text text-muted"> After evaluating, max out your contributions to whichever one you decide on (hover for more info)</p>
+          <p class="card-info info-box">Roth IRA = taxed before, Traditional = taxed after</p>
+        </div>
+
         <a href="https://www.reddit.com/r/personalfinance/wiki/commontopics#wiki_step_4.3A_contribute_to_an_ira" class="card-link">More info</a>
         <br>
         <input type="text" class="text-box" id="text" placeholder="Add comment">
@@ -253,13 +258,17 @@
         <ul id = "commlist" ></ul>
       </div>
     </div>
+
     <div class="card text-center">
       <div class="card-header card-header-phase5">Phase 5: Save more for retirement</div>
       <div class="card-body">
         <h5 class="card-title">Are you currently saving at least 15% of your pre-tax income for retirement?</h5>
-        <p class="card-text text-muted">If yes: Do you have a qualified high deductible health plan and are thus
-          eligible
-          for an investment HSA? (Yes/No)</p>
+        <div class = "hover-info">
+          <p class="card-text text-muted"> If yes: Do you have a qualified high deductible health plan and are thus
+            eligible for an investment HSA? (Yes/No) (hover for more info)</p>
+            <p class="card-info info-box" id = "HSA-info">HSA = health savings account</p>
+        </div>
+
         <p class="card-text text-muted">If no: Does your employer offer a 401(k), 403(b), or similar retirement plan
           into which you could save more money?</p>
         <a href="https://www.reddit.com/r/personalfinance/wiki/commontopics#wiki_step_5.3A_save_more_for_retirement" class="card-link">More info</a>
@@ -358,9 +367,15 @@
       <div class="card-header card-header-phase6">Phase 6: Save for other goals and advanced methods</div>
       <div class="card-body">
         <h5 class="card-title">Do you have more immediate goals?</h5>
-        <p class="card-text text-muted">If yes, use savings for goals sooner than 3-5 years, a conservative mix of
+
+        <div class = "hover-info">
+          <p class="card-text text-muted"> If yes, use savings for goals sooner than 3-5 years, a conservative mix of
+            stocks and bonds for goals more than 3-5 years away (hover for more info)</p>
+            <p class="card-info info-box" id = "stocks-info">Stocks are riskier, while bonds are a safer investment</p>
+        </div>
+        <!-- <p class="card-text text-muted">If yes, use savings for goals sooner than 3-5 years, a conservative mix of
           stocks
-          and bonds for goals more than 3-5 years away</p>
+          and bonds for goals more than 3-5 years away</p> -->
         <a href="https://www.reddit.com/r/personalfinance/wiki/commontopics#wiki_step_6.3A_save_for_other_goals" class="card-link">More info</a>
         <br>
         <input type="text" class="text-box" id="text" placeholder="Add comment">
