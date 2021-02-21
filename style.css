@@ -131,6 +131,7 @@ ul {
     height: 125px;
     box-sizing: border-box;
     position: "right";
+    background-color: transparent;
   }
 
   #HSA-info {
