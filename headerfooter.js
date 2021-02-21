@@ -6,7 +6,7 @@ window.onload = function () {
       <header>
         <nav class="navbar-expand-lg navbar-dark bg-dark">
           <div class="header">
-            <a class="navbar-brand" href="index.html">Personal Finance Tracker</a>
+            <a class="navbar-brand" href="index.html">"Pearl"-sonal Finance Hacker</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
