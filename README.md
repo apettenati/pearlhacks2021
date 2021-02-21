@@ -40,7 +40,8 @@ We learned a lot about JavaScript and used new properties to make our project be
 - Allow users to log in with google instead 
 - Have a budget tracker to help users keep track of their finances as well
 
+## Screenshots
 
-![Checklist and home screen of the finance tracker](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/407/718/datas/small.PNG)o
-![FAQ Tab](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/407/717/datas/small.PNG)
-![Resources Tab](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/407/714/datas/small.PNG)
+![Checklist and home screen of the finance tracker](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/407/718/datas/original.PNG)
+![FAQ Tab](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/407/717/datas/original.PNG)
+![Resources Tab](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/407/714/datas/original.PNG)
