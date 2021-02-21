@@ -4,6 +4,7 @@ const skipButtons = document.querySelectorAll('.skip');
 const commentButtons = document.querySelectorAll('.comment');
 
 //Event Listeners
+// document.addEventListener('DOMContentLoaded', getData);
 completeButtons.forEach(button => {
     button.addEventListener('click', completeTask);
 })
@@ -20,11 +21,12 @@ function completeTask(event) {
     const button = event.target;
     const card = button.parentElement;
     const cardChildren = button.parentElement.children;
-    console.log(card);
     card.classList.toggle("completed");
     console.log(cardChildren);
     cardChildren[0].classList.toggle("completed-strikethrough");
     cardChildren[1].classList.toggle("completed-strikethrough");
+    console.log(cardChildren[0].innerHTML);
+    setData(cardChildren[0].innerHTML);
 } 
 
 function skipTask(event) {
@@ -63,4 +65,29 @@ function saveText(event) {
     text.appendChild(document.createTextNode(textVal));
     list.appendChild(text);
     cardChildren[4].value = ""
+}
+
+function setData(data) {
+    let completed;
+    if(localStorage.getItem('completed') === null) {
+        completed = [];
+    }
+    else {
+        completed = JSON.parse(localStorage.getItem('completed'));
+    }
+    console.log(completed);
+    completed.push(data);
+    localStorage.setItem('completed', JSON.stringify(completed));
+
+}
+
+function getData() {
+    // Check if there's data saved
+    let completed;
+    if(localStorage.getItem('completed') === null) {
+        completed = [];
+    }
+    else {
+        completed = JSON.parse(localStorage.getItem('completed'));
+    }
 }
