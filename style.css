@@ -1,45 +1,43 @@
 .card-header {
     color: white;
     font-size: 18px;
-    padding: 1rem;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    text-align: center;
 }
 
 .card-title {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .card-header-phase0 {
-    color: white;
-    padding: 1rem;
-    font-style: bold;
-    background-color: rgb(34, 36, 70);
+    background-color: #4F78A4;
 }
 .card-header-phase1 {
-    background-color: rgb(233, 90, 80);
+    background-color: #DF5B5D;
 }
 
 .card-header-phase2 {
-    background-color: rgb(238, 218, 108);
+    background-color: #9B7561;
 }
 
 .card-header-phase3 {
-    background-color: rgb(81, 141, 121);
+    background-color: #5B9F52;
 }
 
 .card-header-phase4 {
-    background-color: rgb(127, 193, 255);
+    background-color: #76B5B0;
 }
 
 .card-header-phase5 {
-    background-color: rgb(45, 97, 209);
+    background-color: #F08F3B;
 }
 
 .card-header-phase6 {
-    background-color: rgb(133, 82, 167);
+    background-color: #AD7AA0;
 }
 
 .cards {
-    width: 50%;
+    width: 40%;
 }
 
 .card {
@@ -49,7 +47,7 @@
 button {
     margin-top: 1rem;
 }
-/* TODO: make CSS prettier */
+
 .completed {
     opacity: 0.3;
     background-color: rgb(185, 184, 184);
@@ -94,7 +92,7 @@ ul {
     margin-left: 2%;
 }
 
-#faq-h {
+h2 {
     text-align: center;
 }
 
