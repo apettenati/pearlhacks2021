@@ -49,22 +49,23 @@ function saveText(event) {
     // list.appendChild(text);
     // // card.appendChild(text);
     // // card.appendChild(blank);
-
     const button = event.target;
     const card = button.parentElement;
     const cardChildren = button.parentElement.children;
-
-    cardChildren[9].style.display = "block"; //revealing header "Comments:"
-    var list = cardChildren[10];
-    var text = document.createElement('li');
     var textVal = cardChildren[4].value;
     if (textVal == "") {
         alert("Please enter a comment")
         return
+    } else {
+        cardChildren[9].style.display = "block"; //revealing header "Comments:"
+        var list = cardChildren[10];
+        var text = document.createElement('li');
+        var textVal = cardChildren[4].value;
+
+        text.appendChild(document.createTextNode(textVal));
+        list.appendChild(text);
+        cardChildren[4].value = ""
     }
-    text.appendChild(document.createTextNode(textVal));
-    list.appendChild(text);
-    cardChildren[4].value = ""
 }
 
 function setData(data) {
