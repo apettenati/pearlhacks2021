@@ -5,13 +5,13 @@ body {
 
 .card-header {
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     padding: 1rem 0.5rem 0.5rem 0.5rem;
     text-align: center;
 }
 
 .card-title {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .card-header-phase0 {
@@ -49,9 +49,6 @@ body {
     margin: 1.5rem;
 }
 
-button {
-    margin-top: 1rem;
-}
 
 .completed {
     opacity: 0.3;
