@@ -83,3 +83,7 @@ footer {
 ul {
     list-style-type:none;
 }
+
+#list-header {
+    margin-top: 25px;
+}
