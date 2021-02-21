@@ -84,6 +84,24 @@ ul {
     list-style-type:none;
 }
 
+.footer {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.header {
+    align-items: left;
+    margin-left: 2%;
+}
+
+#faq-h {
+    text-align: center;
+}
+
+.faq-card-body {
+    padding: 2%;
+}
+
 #list-header {
     margin-top: 25px;
 }
