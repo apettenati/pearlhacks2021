@@ -43,7 +43,8 @@ function saveText(event) {
     const button = event.target;
     const card = button.parentElement;
     const cardChildren = button.parentElement.children;
-    var textVal = cardChildren[4].value;
+    var textVal = cardChildren[7].value;
+    console.log("card children", cardChildren[7].value);
     if (textVal == "") {
         alert("Please enter a comment")
         return
@@ -51,10 +52,10 @@ function saveText(event) {
         cardChildren[9].style.display = "block"; //revealing header "Comments:"
         var list = cardChildren[10];
         var text = document.createElement('li');
-        var textVal = cardChildren[4].value;
+        var textVal = cardChildren[7].value;
         text.appendChild(document.createTextNode(textVal));
         list.appendChild(text);
-        cardChildren[4].value = ""
+        cardChildren[7].value = ""
     }
 }
 
