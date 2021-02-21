@@ -4,7 +4,8 @@ const skipButtons = document.querySelectorAll('.skip');
 const commentButtons = document.querySelectorAll('.comment');
 
 //Event Listeners
-document.addEventListener('DOMContentLoaded', getData);
+document.addEventListener('DOMContentLoaded', getCompleteData);
+document.addEventListener('DOMContentLoaded', getSkipData);
 completeButtons.forEach(button => {
     button.addEventListener('click', completeTask);
 })
@@ -26,13 +27,16 @@ function completeTask(event) {
     cardChildren[0].classList.toggle("completed-strikethrough");
     cardChildren[1].classList.toggle("completed-strikethrough");
     console.log(cardChildren[0].innerHTML);
-    setData(cardChildren[0].innerHTML, "completed");
+    setCompleteData(cardChildren[0].innerHTML, "completed");
 } 
 
 function skipTask(event) {
     const button = event.target;
     const card = button.parentElement.parentElement;
     card.classList.toggle("skipped");
+    console.log(`card: ${card.children[1].children[0].innerHTML}`);
+    console.log(`card: ${card.children[1].children[0].innerHTML}`);
+    setSkipData(card.children[1].children[0].innerHTML)
 } 
 
 function saveText(event) {
@@ -54,7 +58,7 @@ function saveText(event) {
     }
 }
 
-function setData(data) {
+function setCompleteData(data) {
     let completed;
     console.log("local storage: ", localStorage.getItem('completed'))
     if (localStorage.getItem('completed') === null) {
@@ -73,33 +77,34 @@ function setData(data) {
     console.log("completed end of setdata: ", completed)
 }
 
-function getData() {
+function getCompleteData() {
     // Check if there's data saved
     // get array of titles of the cards (20)
     // iterate thru array find the ones that are in completed (indexOf)
     // cardChildren[1].classList.toggle("completed-strikethrough");
     let completed;
     var titles = document.getElementsByClassName("card-title")
-    console.log("title: ", titles)
-    console.log("local storage length: ", localStorage.getItem('completed').length)
-    console.log("local storage: ", typeof(localStorage.getItem('completed')))
+    // console.log("title: ", titles)
+    // console.log("local storage: ", typeof(localStorage.getItem('completed')))
     var arr = JSON.parse(localStorage.getItem('completed'))
-    console.log("arr: ", arr)
+    // console.log("arr: ", arr)
     var i
     var j
-    for (i = 0; i < titles.length; i++) {
-        for (j = 0; j < arr.length; j++) {
-            if (titles[i].innerHTML == arr[j]) {
-                console.log("title: ", titles[i].innerHTML)
-                var parent = titles[i].parentElement.parentElement
-                parent.children[1].classList.value = ("completed")
-                console.log("completed: ", document.getElementsByClassName("completed"))
-                console.log("parent: ", parent)
-                var child = parent.children
-                console.log("child: ", child)
-                child[1].children[0].classList.value = "completed-strikethrough"
-                child[1].children[1].classList.value = "completed-strikethrough"
-                console.log("strikethrough: ", document.getElementsByClassName("completed-strikethrough"))
+    if (arr !== null) {
+        for (i = 0; i < titles.length; i++) {
+            for (j = 0; j < arr.length; j++) {
+                if (titles[i].innerHTML == arr[j]) {
+                    // console.log("title: ", titles[i].innerHTML)
+                    var parent = titles[i].parentElement.parentElement
+                    parent.children[1].classList.value = ("completed")
+                    // console.log("completed: ", document.getElementsByClassName("completed"))
+                    // console.log("parent: ", parent)
+                    var child = parent.children
+                    // console.log("child: ", child)
+                    child[1].children[0].classList.value = "completed-strikethrough"
+                    child[1].children[1].classList.value = "completed-strikethrough"
+                    // console.log("strikethrough: ", document.getElementsByClassName("completed-strikethrough"))
+                }
             }
         }
     }
@@ -113,10 +118,64 @@ function getData() {
     }
 }
 
+function setSkipData(data) {
+    let skip;
+    // console.log("local storage: ", localStorage.getItem('skip'))
+    if (localStorage.getItem('skip') === null) {
+        skip = [];
+    }
+    else {
+        skip = JSON.parse(localStorage.getItem('skip'));
+    }
+    if (skip.includes(data)) {
+        skip.splice(data);
+    }
+    else {
+        skip.push(data);
+    }
+    localStorage.setItem('skip', JSON.stringify(skip));
+    // console.log("skip end of setdata: ", skip)
+}
+function getSkipData() {
+    // Check if there's data saved
+    // get array of titles of the cards (20)
+    // iterate thru array find the ones that are in skip (indexOf)
+    // cardChildren[1].classList.toggle("skip-strikethrough");
+    let skip;
+    var titles = document.getElementsByClassName("card-title")
+    // console.log("local storage: ", typeof(localStorage.getItem('skip')))
+    var arr = JSON.parse(localStorage.getItem('skip'))
+    // console.log("arr: ", arr)
+    var i
+    var j
+    if (arr !== null) {
+        for (i = 0; i < titles.length; i++) {
+            for (j = 0; j < arr.length; j++) {
+                if (titles[i].innerHTML == arr[j]) {
+                    // console.log("title: ", titles[i].innerHTML)
+                    var parent = titles[i].parentElement.parentElement
+                    // console.log("parent", parent.classList)
+                    parent.classList.value = "skipped";
+                    // console.log("class list:", parent.classList.value)
+                }
+            }
+        }
+    }
+    console.log("getdata: ", localStorage.getItem('skip'))
+    if(localStorage.getItem('skip') === null) {
+        skip = [];
+    }
+    else {
+
+        skip = JSON.parse(localStorage.getItem('skip'));
+    }
+}
+
 // event listener for when page reloads
-// store data thats currenrtlt changed
+// store data thats currently changed
 // send data w event listener 
 
 window.addEventListener('load', event => {
-    getData()
-})
+    getCompleteData();
+    getSkipData();
+});
