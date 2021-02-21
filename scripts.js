@@ -22,6 +22,7 @@ function completeTask(event) {
     const card = button.parentElement;
     const cardChildren = button.parentElement.children;
     card.classList.toggle("completed");
+    console.log(cardChildren);
     cardChildren[0].classList.toggle("completed-strikethrough");
     cardChildren[1].classList.toggle("completed-strikethrough");
     console.log(cardChildren[0].innerHTML);
@@ -35,17 +36,30 @@ function skipTask(event) {
 } 
 
 function saveText(event) {
-    listHeader = document.getElementById("list-header");
-    listHeader.style.display = "block";
+    // const button = event.target;
+    // const card = button.parentElement;
+    // listHeader = card.getElementById("list-header");
+    // listHeader.style.display = "block";
+    // const cardChildren = button.parentElement.children;
+
+    // var list = card.getElementById("commlist");
+    // // var textVal = document.getElementById("text").value;
+    // var text = card.createElement('li');
+    // text.appendChild(card.createTextNode(textVal));
+    // list.appendChild(text);
+    // // card.appendChild(text);
+    // // card.appendChild(blank);
+
     const button = event.target;
-    const card = button.parentElement.parentElement;
-    var list = document.getElementById("commlist");
-    var textVal = document.getElementById("text").value;
+    const card = button.parentElement;
+    const cardChildren = button.parentElement.children;
+
+    cardChildren[9].style.display = "block"; //revealing header "Comments:"
+    var list = cardChildren[10];
     var text = document.createElement('li');
+    var textVal = cardChildren[4].value;
     text.appendChild(document.createTextNode(textVal));
     list.appendChild(text);
-    // card.appendChild(text);
-    // card.appendChild(blank);
 }
 
 function setData(data) {
