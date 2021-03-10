@@ -8,6 +8,8 @@ Created at [Pearl Hacks 2021!](https://pearlhacks.com/)
 
 [Devpost Link](https://devpost.com/software/pearl-sonal-finance-hacker/)
 
+[Live Preview](https://apettenati.github.io/pearlhacks2021/index.html)
+
 ## Inspiration
 
 As young adults, we don't know a whole lot about personal finance, but we think it's important to learn about.  It's good to learn about personal finance early so that we can start planning on how to become financially secure down the road. We thought this checklist was a good place to start learning about the different steps to take to ensure economic stability.  We figured that we weren't the only people who didn't know much about personal finance but wanted to learn more, so we created this project! We followed a flowchart from r/personalfinance as a guideline 
